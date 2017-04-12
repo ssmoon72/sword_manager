@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EDIT SWORD</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <h1> MADE A MISTAKE? CHANGE THIS SWORD! </h1>
+    <% for (var i = 0; i < sword.length; i++) { %>
+      <h2> <%= sword[i].name %> </h2>
+      <form class='sword_form' action="/swords/<%= sword[i].id %>" method="post">
+        <label for="name">CHANGE THE NAME OF THIS LEGENDARY BLADE: </label>
+        <input type="text" name="name" value="<%= sword[i].name %>">
+        <label for="rarity">HOW RARE IS IT: </label>
+        <select name="rarity">
+          <option value="<%= sword[i].rarity %>" selected> Current: <%= sword[i].rarity %></option>
+          <option value="Common">COMMON</option>
+          <option value="Uncommon">UNCOMMON</option>
+          <option value="Rare">RARE</option>
+          <option value="Epic">EPIC</option>
+          <option value="Legendary">LEGENDARY</option>
+        </select>
+        <select name="power">
+          <option value = "<% sword[i].power %>" selected> Current: <%= sword[i].power %> </option>
+          <option value="Weak">WEAK</option>
+          <option value="Normal">NORMAL</option>
+          <option value="Strong">STRONG</option>
+        </select>
+        <input type="submit" name="submit" value="GIMME THAT SWORD">
+      </form>
+    <% } %>
+  </body>
+</html>

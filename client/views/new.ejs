@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NEW SWORD</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <h1> I'M GETTING ANOTHER SWORD </h1>
+    <form class='sword_form' action="/swords" method="post">
+      <label for="name">WHAT'S THE NAME OF THIS LEGENDARY BLADE: </label>
+      <input type="text" name="name">
+      <label for="rarity">HOW RARE IS IT: </label>
+      <select name="rarity">
+        <option value="Common">COMMON</option>
+        <option value="Uncommon">UNCOMMON</option>
+        <option value="Rare">RARE</option>
+        <option value="Epic">EPIC</option>
+        <option value="Legendary">LEGENDARY</option>
+      </select>
+      <select name="power">
+        <option value="Weak">WEAK</option>
+        <option value="Normal">NORMAL</option>
+        <option value="Strong">STRONG</option>
+      </select>
+      <input type="submit" name="submit" value="GIMME THAT SWORD">
+    </form>
+  </body>
+</html>

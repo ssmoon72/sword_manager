@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>I GOT ANOTHER SWORD</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <h1> Trying to talk smack against me? </h1>
+    <img src="images/fboi.jpg">
+    <h1> Look How Many Swords I Got </h1>
+    <% for (var i = 0; i < sword.length; i++) { %>
+      <h3> <em> Name: </em><%= sword[i].name %> </h3>
+      <h4> <em>Rarity:</em> <%= sword[i].rarity %> - <em>Strength:</em> <%= sword[i].power %> </h4>
+      <a href="/swords/edit/<%= sword[i].id %>"> CHANGE THIS SWORD </a>
+      <a href="/swords/<%= sword[i].id %>"> INSPECT THIS SWORD </a>
+      <form action="/swords/destroy/<%= sword[i].id %>" method="post">
+        <input type="submit" name="submit" value="I'LL PUT DOWN MY WEAPON">
+      </form>
+      <hr>
+    <% } %>
+    <a class='new_sword' href="/swords/new"> I GOT ANOTHER SWORD</a>
+  </body>
+</html>
